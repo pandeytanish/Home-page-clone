@@ -14,17 +14,15 @@
 </head>
 
 <body>
-
+  <!-- Side Bar  -->
     <div class="container text-center">
         <div class="row my-2">
             <div class="col-lg-3">
-                <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button> -->
-
                 <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
                     id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                     <div class="offcanvas-header">
                         <div class="offcanvas-title" id="offcanvasScrollingLabel">
-                            <img width="200px" height="auto"
+                            <img class="sidebar-img" width="200px" height="auto"
                                 src="data:image/png;base64,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"
                                 alt="">
 
@@ -33,31 +31,36 @@
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <ul class="text-black  list-style-type: none">
-                            <li>transaction</li>
-                            <li>Booking </li>
-                            <li>Application Status</li>
-                            <li>Saathi Onboarding</li>
-                            <li>Growth Overview</li>
-                            <li>profile</li>
-                            <li>Setting</li>
-                            <li>Promosional</li>
-                            <li>Customer Register</li>
-                            <li>Beneficiary Register</li>
-                            <li>Lead Generation</li>
-                            <li>Logout Account</li>
+                        <ul class="sidebar-list text-black  list-unstyled text-2xl">
+                            
+                            <li><i class="fa-solid fa-money-bill-transfer"></i>Transaction History</li>
+                            <li><i class="fa-solid fa-calendar-days"></i>Booking </li>
+                            <li><i class="fa-solid fa-spinner"></i>Application Status</li>
+                            <li><i class="fa-solid fa-users"></i>Saathi Onboarding</li>
+                            <li><i class="fa-solid fa-chart-line"></i>Growth Overview</li>
+                            <li><i class="fa-solid fa-circle-user"></i>Profile</li>
+                            <li><i class="fa-solid fa-gear"></i>Settings</li>
+                            <li><i class="fa-solid fa-rectangle-ad"></i>Promotional</li>
+                            <li><i class="fa-solid fa-user-plus"></i>Customer Register</li>
+                            <li><i class="fa-regular fa-rectangle-list"></i>Beneficiary Register</li>
+                            <li><i class="fa-solid fa-table-list"></i>Lead Generation</li>
+                            <li><i class="fa-solid fa-circle-info"></i>Support</li>
+                            <li> <i class="fa-solid fa-user-minus"></i>Delete Account</li>
+                            <li><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout Account</li>
 
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-
+        <!-- <i class=""></i> -->
     </div>
+
+    <!-- Nav Bar  -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-        <i data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" class="fa-solid fa-chevron-right"></i>
+        <i  data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" class="sidebar-btn fa-solid fa-bars"></i>
             <a class="navbar-brand" href="#"> <img width="200px" height="auto"
                     src="data:image/png;base64,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"
                     alt=""></a>
@@ -67,29 +70,53 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <form class="d-flex" role="search">
-                    
-                        <button class="" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
+                <ul class=" navbar-content navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <i class="search-btn fa-solid fa-magnifying-glass"></i>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Jobs</a>
+                        Home
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Schems</a>
+                        Jobs
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">history</a>
+                        Schemes
+                    </li>
+                    <li class="nav-item">
+                        History
                     </li>
 
                     <li class="nav-item">
-                        <div class="d-flex flex-column">
+                        <div class=" balance d-flex flex-column">
                             <p>Balance Rs</p>
-                            <p>100Rs</p>
+                            <p><i class="fa-solid fa-wallet"></i>100Rs</p>
                         </div>
+                    </li>
+                    <li>
+                        <button class="add-money-btn">
+                            Add Money
+                        </button>
+                        <button class="more-btn">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class=" members d-flex flex-column">
+                            <p>Members</p>
+                            <p><i class="fa-regular fa-star-half-stroke"></i>0</p>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <p>Verify KYC</p>
+                    </li>
+                    <li class="nav-item">
+                        <i class="notification-btn fa-regular fa-bell"></i>
+                    </li>
+
+                    <li class="nav-item">
+                        <i class="user-info fa-regular fa-circle-user"></i>
                     </li>
                 
                 </ul>
@@ -98,9 +125,10 @@
             </div>
         </div>
     </nav>
+    <!-- front Banner With KYC Message Section  -->
     <section>
         <div class="m-3 p-3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3">
-            Example element with utilities
+            <i class="fa-solid fa-circle-info"></i> Please Fill Your SajiloPay KYC and get maximum limits on transaction
         </div>
         <div class="container text-center">
             <div class="row my-2">
@@ -125,7 +153,7 @@
                                         <i class="fa-solid fa-money-bill card-img-top"></i>
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Recharge And Bill Payment </p>
+                                        <p class="card-text">Indo Nepal Services </p>
                                     </div>
                                 </div>
                             </div>
@@ -136,7 +164,7 @@
                                         <i class="fa-solid fa-money-bill card-img-top"></i>
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Recharge And Bill Payment </p>
+                                        <p class="card-text">Banking And Insurance </p>
                                     </div>
                                 </div>
                             </div>
@@ -147,7 +175,7 @@
                                         <i class="fa-solid fa-money-bill card-img-top"></i>
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Recharge And Bill Payment </p>
+                                        <p class="card-text">Jobs </p>
                                     </div>
                                 </div>
                             </div>
@@ -163,7 +191,7 @@
                                         <i class="fa-solid fa-money-bill card-img-top"></i>
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Recharge And Bill Payment </p>
+                                        <p class="card-text">DTH </p>
                                     </div>
                                 </div>
                             </div>
@@ -174,7 +202,7 @@
                                         <i class="fa-solid fa-money-bill card-img-top"></i>
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Recharge And Bill Payment </p>
+                                        <p class="card-text"> Prepaid </p>
                                     </div>
                                 </div>
                             </div>
@@ -185,7 +213,7 @@
                                         <i class="fa-solid fa-money-bill card-img-top"></i>
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Recharge And Bill Payment </p>
+                                        <p class="card-text">Top Up </p>
                                     </div>
                                 </div>
                             </div>
@@ -196,7 +224,7 @@
                                         <i class="fa-solid fa-money-bill card-img-top"></i>
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Recharge And Bill Payment </p>
+                                        <p class="card-text">DTH </p>
                                     </div>
                                 </div>
                             </div>
@@ -217,6 +245,7 @@
             </div>
         </div>
     </section>
+<!-- Recharge and bill Payment Section -->
     <section>
 
         <div class="container text-center">
@@ -231,7 +260,7 @@
                             <i class="fa-solid fa-money-bill card-img-top"></i>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Recharge And Bill Payment </p>
+                            <p class="card-text">DTH NPL </p>
                         </div>
                     </div>
                 </div>
@@ -242,7 +271,7 @@
                             <i class="fa-solid fa-money-bill card-img-top"></i>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Recharge And Bill Payment </p>
+                            <p class="card-text">Prepaid </p>
                         </div>
                     </div>
                 </div>
@@ -253,7 +282,7 @@
                             <i class="fa-solid fa-money-bill card-img-top"></i>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Recharge And Bill Payment </p>
+                            <p class="card-text">Topup </p>
                         </div>
                     </div>
                 </div>
@@ -264,7 +293,7 @@
                             <i class="fa-solid fa-money-bill card-img-top"></i>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Recharge And Bill Payment </p>
+                            <p class="card-text"> Internet </p>
                         </div>
                     </div>
                 </div>
@@ -275,7 +304,7 @@
                             <i class="fa-solid fa-money-bill card-img-top"></i>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Recharge And Bill Payment </p>
+                            <p class="card-text">DTH Ind </p>
                         </div>
                     </div>
                 </div>
@@ -286,7 +315,7 @@
                             <i class="fa-solid fa-money-bill card-img-top"></i>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Recharge And Bill Payment </p>
+                            <p class="card-text">Bill Payment</p>
                         </div>
                     </div>
                 </div>
@@ -297,7 +326,7 @@
                             <i class="fa-solid fa-money-bill card-img-top"></i>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Recharge And Bill Payment </p>
+                            <p class="card-text">Postpaid </p>
                         </div>
                     </div>
                 </div>
@@ -309,7 +338,7 @@
                             <i class="fa-solid fa-money-bill card-img-top"></i>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Recharge And Bill Payment </p>
+                            <p class="card-text">Insurance </p>
                         </div>
                     </div>
                 </div>
@@ -323,7 +352,7 @@
                             <i class="fa-solid fa-money-bill card-img-top"></i>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Recharge And Bill Payment </p>
+                            <p class="card-text">Landline </p>
                         </div>
                     </div>
                 </div>
@@ -334,7 +363,7 @@
                             <i class="fa-solid fa-money-bill card-img-top"></i>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Recharge And Bill Payment </p>
+                            <p class="card-text">Electricity </p>
                         </div>
                     </div>
                 </div>
@@ -345,7 +374,7 @@
                             <i class="fa-solid fa-money-bill card-img-top"></i>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Recharge And Bill Payment </p>
+                            <p class="card-text">Gas </p>
                         </div>
                     </div>
                 </div>
@@ -356,7 +385,7 @@
                             <i class="fa-solid fa-money-bill card-img-top"></i>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Recharge And Bill Payment </p>
+                            <p class="card-text"> Water </p>
                         </div>
                     </div>
                 </div>
@@ -367,7 +396,7 @@
                             <i class="fa-solid fa-money-bill card-img-top"></i>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Recharge And Bill Payment </p>
+                            <p class="card-text">Fastag </p>
                         </div>
                     </div>
                 </div>
@@ -378,7 +407,7 @@
                             <i class="fa-solid fa-money-bill card-img-top"></i>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Recharge And Bill Payment </p>
+                            <p class="card-text">Loan </p>
                         </div>
                     </div>
                 </div>
@@ -389,7 +418,7 @@
                             <i class="fa-solid fa-money-bill card-img-top"></i>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Recharge And Bill Payment </p>
+                            <p class="card-text">Broadband</p>
                         </div>
                     </div>
                 </div>
@@ -401,7 +430,7 @@
             </div>
         </div>
     </section>
-
+<!-- Indo Nepal Services -->
     <section>
         <div class="container text-center">
         <div class="row">
@@ -409,7 +438,7 @@
                 <div class="container text-center">
                  
                     <div class="d-flex my-3 py-2 justify-content-sm-start ">
-                        <h4>Recently Used Services</h4>
+                        <h4>Indo Nepal Services</h4>
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
@@ -419,7 +448,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">IME Remittance </p>
                                 </div>
                             </div>
                         </div>
@@ -430,7 +459,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Prabhu Remittance</p>
                                 </div>
                             </div>
                         </div>
@@ -441,7 +470,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Utility App </p>
                                 </div>
                             </div>
                         </div>
@@ -452,7 +481,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Top up </p>
                                 </div>
                             </div>
                         </div>
@@ -465,6 +494,7 @@
         </div>
     </div>
     </section>
+    <!-- Banking Services -->
     <section>
         <div class="container text-center">
         <div class="row">
@@ -472,7 +502,7 @@
                 <div class="container text-center">
                  
                     <div class="d-flex my-3 py-2 justify-content-sm-start ">
-                        <h4>Recently Used Services</h4>
+                        <h4>Banking Services</h4>
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
@@ -482,7 +512,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Domestic Money Transfer </p>
                                 </div>
                             </div>
                         </div>
@@ -493,7 +523,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">AePS </p>
                                 </div>
                             </div>
                         </div>
@@ -504,7 +534,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Micro ATM </p>
                                 </div>
                             </div>
                         </div>
@@ -515,7 +545,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Loan Repayment</p>
                                 </div>
                             </div>
                         </div>
@@ -528,6 +558,7 @@
         </div>
     </div>
     </section>
+    <!-- Travel -->
     <section>
         <div class="container text-center">
         <div class="row my-2">
@@ -535,7 +566,7 @@
                 <div class="container text-center">
                  
                     <div class="d-flex my-3 py-2 justify-content-sm-start ">
-                        <h4>Recently Used Services</h4>
+                        <h4>Travel</h4>
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
@@ -545,7 +576,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Bus Booking </p>
                                 </div>
                             </div>
                         </div>
@@ -556,7 +587,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Flight Booking</p>
                                 </div>
                             </div>
                         </div>
@@ -567,7 +598,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Train Booking </p>
                                 </div>
                             </div>
                         </div>
@@ -578,7 +609,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text"> Hotel Booking </p>
                                 </div>
                             </div>
                         </div>
@@ -591,6 +622,7 @@
         </div>
     </div>
     </section>
+    <!-- Jobs -->
     <section>
         <div class="container text-center">
         <div class="row">
@@ -598,7 +630,7 @@
                 <div class="container text-center">
                  
                     <div class="d-flex my-3 py-2 justify-content-sm-start ">
-                        <h4>Recently Used Services</h4>
+                        <h4>Jobs</h4>
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
@@ -608,7 +640,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Build Resume </p>
                                 </div>
                             </div>
                         </div>
@@ -619,7 +651,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Find Jobs </p>
                                 </div>
                             </div>
                         </div>
@@ -630,7 +662,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Find Candidate </p>
                                 </div>
                             </div>
                         </div>
@@ -641,7 +673,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Goverment Jobs </p>
                                 </div>
                             </div>
                         </div>
@@ -654,6 +686,7 @@
         </div>
     </div>
     </section>
+    <!-- Schemes -->
     <section>
         <div class="container text-center">
         <div class="row">
@@ -661,7 +694,7 @@
                 <div class="container text-center">
                  
                     <div class="d-flex my-3 py-2 justify-content-sm-start ">
-                        <h4>Recently Used Services</h4>
+                        <h4>Schemes</h4>
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
@@ -671,7 +704,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Explore Schemes </p>
                                 </div>
                             </div>
                         </div>
@@ -682,7 +715,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Check your Eligibility</p>
                                 </div>
                             </div>
                         </div>
@@ -693,7 +726,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Apply for Schemes </p>
                                 </div>
                             </div>
                         </div>
@@ -704,7 +737,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Book </p>
                                 </div>
                             </div>
                         </div>
@@ -717,6 +750,7 @@
         </div>
     </div>
     </section>
+    <!-- Business and Document  -->
     <section>
         <div class="container text-center">
         <div class="row">
@@ -724,7 +758,7 @@
                 <div class="container text-center">
                  
                     <div class="d-flex my-3 py-2 justify-content-sm-start ">
-                        <h4>Recently Used Services</h4>
+                        <h4>Business and Document</h4>
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
@@ -734,7 +768,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Document Advisor </p>
                                 </div>
                             </div>
                         </div>
@@ -745,7 +779,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Book Saathi </p>
                                 </div>
                             </div>
                         </div>
@@ -756,7 +790,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Fees and Charges </p>
                                 </div>
                             </div>
                         </div>
@@ -767,7 +801,7 @@
                                     <i class="fa-solid fa-money-bill card-img-top"></i>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Recharge And Bill Payment </p>
+                                    <p class="card-text">Our Services </p>
                                 </div>
                             </div>
                         </div>
@@ -780,24 +814,9 @@
         </div>
     </div>
     </section>
-    <!-- <div class="container text-center">
-        <div class="row"> -->
-      <!-- <div class="col-lg-12">
-        <img class="img" src="https://api.dominos.co.in/prod-olo-api/images/Home_Paytm_20210519.jpg" alt="">
-      </div>
-        </div>
-
-    </div>
-    <footer class="d-flex">
-        <div class="footer-logo ">
-            <img src="logo.png" alt="Company Logo">
-        </div>
-        <div class="footer-details d-flex ml-2">
-            <p>Addres</p>
-            <p>Phone:</p>
-            <p>Email: info@example.com</p>
-        </div>
-    </footer> -->
+  <div class="foot-img">
+    <img src="" alt="Promotional image">
+  </div>
 </body>
 
 </html>

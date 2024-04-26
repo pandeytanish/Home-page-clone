@@ -1,13 +1,70 @@
-.img {
-width: 1200px;
-height: 250px;
-margin-left: 50px;
-margin-right: 50px;
-margin-top: 20px;
+.sidebar-list {
+  font-size: 24px;
+  text-align: left;
+  margin-top: 15px;
+  margin-left: 16px;
+  line-height: 56px;
 }
+.sidebar-list i {
+  text-align: left;
+  margin-right: 4px;
+}
+.sidebar-img {
+  padding-left: 15px;
+  padding-top: 20px;
+}
+.sidebar-btn {
+  color: black;
+  margin-right: 5px;
+}
+.search-btn {
+  background: transparent;
+  border: none;
+}
+.navbar-content {
+  display: flex ;
+  gap: 40px;
+  margin-top: 15px;
+  color: black;
+  margin-left: 10px;
+}
+.balance{
+  margin-left: 60px;
+  
+}
+.add-money-btn {
+  background: rgb(22, 167, 216);
+  border: none;
+  border-radius: 50px;
+  height: 40px;
+  width: 120px;
+  
+}
+.more-btn {
+  background: rgb(22, 167, 216);
+  border: none;
+  border-radius: 50px;
+  height: 40px;
+  width: 60px;
+  margin-right: 25px;
+}
+.members {
+  margin-left: 50px;
+}
+.notification-btn {
+ font-size: 36px;
+ /* margin-left: 10px; */
+}
+.user-info {
+  font-size: 36px;
+ }
+
+ 
+
+
 @media only screen and (max-width: 400px) {
-    .img {
-      width: 300px;
+    .footer-img {
+      width: 250px;
       margin-left: 15px;
 margin-right: 15px;
     }
@@ -19,3 +76,14 @@ margin-right: 15px;
   .button {
     border: none;
   }
+ .foot-img {
+  height: 200px;
+  width: 85%;
+  margin-top: 10px;
+  margin-left: 35px;
+  margin-right: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: beige;
+ }

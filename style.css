@@ -1,3 +1,4 @@
+/* side bar style */
 .sidebar-list {
   font-size: 24px;
   text-align: left;
@@ -5,6 +6,7 @@
   margin-left: 16px;
   line-height: 56px;
 }
+
 .sidebar-list i {
   text-align: left;
   margin-right: 4px;
@@ -21,6 +23,7 @@
   background: transparent;
   border: none;
 }
+/* Navbar style */
 .navbar-content {
   display: flex ;
   gap: 40px;
@@ -28,12 +31,15 @@
   color: black;
   margin-left: 10px;
 }
+.button {
+  border: none;
+}
 .balance{
   margin-left: 60px;
   
 }
 .add-money-btn {
-  background: rgb(22, 167, 216);
+  background: #B9E9FF;
   border: none;
   border-radius: 50px;
   height: 40px;
@@ -41,11 +47,12 @@
   
 }
 .more-btn {
-  background: rgb(22, 167, 216);
+  background: #B9E9FF;
   border: none;
   border-radius: 50px;
   height: 40px;
   width: 60px;
+  margin-left: 6px;
   margin-right: 25px;
 }
 .members {
@@ -53,15 +60,42 @@
 }
 .notification-btn {
  font-size: 36px;
- /* margin-left: 10px; */
 }
 .user-info {
   font-size: 36px;
  }
 
- 
+/* box style */
+.card {
+  margin-top: 12px;
+}
+.card-body {
+  font-size: 18px;
+}
+.categories-card {
+  width: 125px;
+  margin-right: 20px;
+  font-size: 10px;
+}
 
-
+ /* footer style */
+ .footer {
+  background-color: #E7F7FF;
+  color: black;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .footer {
+    display: block;
+  }
+}
+/* foot img style */
 @media only screen and (max-width: 400px) {
     .footer-img {
       width: 250px;
@@ -73,12 +107,11 @@ margin-right: 15px;
     }
   }
 
-  .button {
-    border: none;
-  }
+
  .foot-img {
+  margin-bottom: 10px;
   height: 200px;
-  width: 85%;
+  width: 84%;
   margin-top: 10px;
   margin-left: 35px;
   margin-right: 10px;
